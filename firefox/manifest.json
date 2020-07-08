@@ -1,9 +1,9 @@
 {
 
   "manifest_version": 2,
-  "name": "Media List",
-  "description": ".",
-  "version": "1.0",
+  "name": "Greek Website Covid19 Campaing Funding",
+  "description": "See whether the news websites you visit have received government funding for the COVID19 campaing.",
+  "version": "0.1",
   "browser_specific_settings": {
     "gecko": {
       "strict_min_version": "54.0a1"

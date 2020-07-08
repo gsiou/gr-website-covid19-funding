@@ -1,5 +1,9 @@
 var myWindowId;
-const contentBox = document.querySelector("#content");
+const total = document.querySelector("#total");
+const entolon = document.querySelector("#entolon");
+const timologimeno = document.querySelector("#timologimeno");
+const inList = document.querySelector("#in-list");
+const notInList = document.querySelector("#not-in-list");
 
 function updateContent() {
   browser.tabs.query({windowId: myWindowId, active: true})
@@ -10,9 +14,14 @@ function updateContent() {
     })
     .then(response => {
       if(response) {
-        contentBox.textContent = response.total;
+        inList.classList.remove('hidden');
+        notInList.classList.add('hidden');
+        total.textContent = response.total;
+        entolon.textContent = response.entolon;
+        timologimeno.textContent = response.timologimeno;
       } else {
-        contentBox.textContent = "Δεν είναι στη λίστα"
+        inList.classList.add('hidden');
+        notInList.classList.remove('hidden');
       }
     });
 }

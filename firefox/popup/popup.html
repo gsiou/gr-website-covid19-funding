@@ -3,11 +3,20 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="panel.css"/>
+    <link rel="stylesheet" href="popup.css"/>
   </head>
 
 <body>
-  <div id="content"></div>
+  <h1 id="title"></h1>
+  <div id="in-list">
+    Ποσό βάσει εντολών: <span id="entolon"></span><br/>
+    Τιμολογημένο Ποσό: <span id="timologimeno"></span>
+    <hr/>
+    Συνολική Αξία με ΦΠΑ: <span id="total"></span>
+  </div>
+  <div id="not-in-list">
+    <span>Ο ιστότοπος δεν φαίνεται να ανήκει στην λίστα.</span>
+  </div>
   <script src="popup.js"></script>
 </body>
 

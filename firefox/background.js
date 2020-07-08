@@ -6,7 +6,7 @@ browser.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
         const base = getBase(tab.url);
         if (base.toUpperCase() in data) {
             // contentBox.textContent = data[base.toUpperCase()].total;
-            browser.browserAction.setBadgeText({text: "•"});
+            browser.browserAction.setBadgeText({text: "€"});
         } else {
             // contentBox.textContent = base;
             browser.browserAction.setBadgeText({text: ""});
