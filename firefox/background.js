@@ -1,5 +1,10 @@
 function getBase(url) {
-    return new URL(url).hostname.substr(4);
+    const hostname = new URL(url).hostname;
+    if(hostname.substr(0, 4) === "www.") {
+        return hostname.substr(4);
+    } else {
+        return hostname;
+    }
 }
 browser.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
     if(tab.active) {
