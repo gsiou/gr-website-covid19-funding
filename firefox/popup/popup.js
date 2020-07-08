@@ -26,9 +26,9 @@ function updateContent() {
     });
 }
 
-browser.tabs.onActivated.addListener(updateContent);
+chrome.tabs.onActivated.addListener(updateContent);
 
-browser.tabs.onUpdated.addListener(updateContent);
+chrome.tabs.onUpdated.addListener(updateContent);
 
 browser.windows.getCurrent({populate: true}).then((windowInfo) => {
   myWindowId = windowInfo.id;

@@ -8,6 +8,7 @@ html, body {
 body {
   padding: 20px 10px;
   background-color: #F4F7F8;
+  min-width: 200px;
 }
 
 .hidden {

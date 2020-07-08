@@ -3,7 +3,7 @@
   "manifest_version": 2,
   "name": "Greek Website Covid19 Campaign Funding",
   "description": "See whether the news websites you visit have received government funding for the COVID19 campaign.",
-  "version": "0.2",
+  "version": "0.3",
   "browser_specific_settings": {
     "gecko": {
       "strict_min_version": "54.0a1"
@@ -11,13 +11,17 @@
   },
 
   "browser_action": {
-    "default_icon": "icons/icon.svg",
+    "default_icon": "icons/scroll.png",
     "default_title" : "Website Funding List",
     "default_popup": "popup/popup.html"
   },
 
+  "icons": {
+    "256": "icons/scroll.png"
+  },
+
   "background": {
-    "scripts": ["data.js", "background.js"]
+    "scripts": ["browser-polyfill.js", "data.js", "background.js"]
   },
 
   "permissions": ["tabs"]
